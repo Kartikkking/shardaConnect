@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharda Connect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Sharda Connect</h1>
+  </header>
+  
+  <main>
+    <section class="login-section">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <section class="tabs" style="display:none;">
+      <button class="tablink active" onclick="openTab(event, 'feed')">Feed</button>
+      <button class="tablink" onclick="openTab(event, 'personal-chat')">Personal Chat</button>
+      <button class="tablink" onclick="openTab(event, 'announcements')">Announcements</button>
+      <button class="tablink" onclick="openTab(event, 'profile')">Profile</button>
+    </section>
+
+    <section id="feed" class="tabcontent">
+      <!-- Feed content will be loaded dynamically here -->
+    </section>
+
+    <section id="personal-chat" class="tabcontent" style="display:none;">
+      <!-- Personal Chat content goes here -->
+      <p>This is the Personal Chat tab content.</p>
+    </section>
+
+    <section id="announcements" class="tabcontent" style="display:none;">
+      <!-- Announcements content goes here -->
+      <p>This is the Announcements tab content.</p>
+    </section>
+
+    <section id="profile" class="tabcontent" style="display:none;">
+      <!-- Profile content goes here -->
+      <p>This is the Profile tab content.</p>
+    </section>
+
+    <section class="post-section" id="post-section" style="display: none;">
+      <h2>Post Your Thought</h2>
+      <form id="post-form">
+        <textarea id="thoughts" name="thoughts" rows="4" placeholder="Share your thoughts..."></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Sharda Connect</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
